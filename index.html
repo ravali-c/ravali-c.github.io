@@ -46,18 +46,15 @@
       var isClose=true;
         const stopwords = ["of", "the", "a", "an", "any", "is", "can", "who", "what", "why", "whom"];
         var editor = "sorts\n" +
-            "    #people = {tommy, alex, john, daniel, sarah, peter, lino}.\n" +
-            "    #gender = {male, female}.\n" +
+            "    #Companies = {toyota, ford, honda, chevrolet, nissan, hyundai}.\n" +
+            "    #Models = {camry, corolla, rav4, highlander, 4runner, tacoma, mustang, f-150, explorer, edge, escape, ranger, civic, accord, cr-v, pilot, odyssey, ridgeline }.\n" +
             "predicates\n" +
-            "    advisor(#people, #people).\n" +
+            "    model(#model, #company).\n" +
             "    friend(#people, #people).\n" +
             "    gender(#people,#gender).\n" +
             "    spanish(#people).\n" +
             "rules\n" +
-            "    advisor(tommy, alex).\n" +
-            "    advisor(tommy, john).\n" +
-            "    advisor(tommy, daniel).\n" +
-            "    advisor(tommy, lino).\n" +
+            "   model(camry, toyota).\n" +
             "    friend(lino, alex).\n" +
             "    friend(lino, peter).\n" +
             "    friend(sarah, alex).\n" +
