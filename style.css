@@ -1,3 +1,12 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins',
+    sans-serif;
+}
+
 .container {
   text-align: center;
   margin: 50px auto;
@@ -8,16 +17,24 @@ h1 {
 }
 
 button {
-  border: none;
+  border: 1px solid lightgray;
+  padding: 2px 12px;
   background: none;
+  border-radius: 8px;
   font-size: 32px;
   color: #666;
   cursor: pointer;
+  margin-left: 8px;
+}
+
+button:hover {
+  background-color: lightseagreen;
+  color: white;
 }
 
 button i.fa {
-  /* change the color of the icon */
-  color: #3366cc;
+  /* change the color of the icon - changed */
+  color: black;
 }
 
 
@@ -25,7 +42,13 @@ button i.fa {
   margin-top: 20px;
   padding: 10px;
   font-size: 24px;
-  width: 400px;
+  width: 600px;
+  border-radius: 12px;
+  border: 1px solid lightgray;
+}
+
+#text-input:focus-visible{
+  outline: none;
 }
 
 .hidden {
@@ -50,6 +73,22 @@ button i.fa {
   border: 1px solid #ccc;
   padding: 10px;
   width: 400px;
-  display: none; /* add this line */
 }
 
+.main {
+  height: calc(100vh - 30px);
+}
+
+.rentals {
+  background-image: url(./bg-image.png);
+  background-repeat: no-repeat;
+height: 100%;
+background-size: 600px;
+background-position:bottom right;
+
+}
+
+.content {
+  margin-left: 250px;
+  padding-top: 100px;
+}
