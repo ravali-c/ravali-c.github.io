@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Car Dealers and Auto repairs</title>
+    <title>Simple ASP Website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -12,8 +12,6 @@
     <script src="fuzzyset.js"></script>
 
     <style>
-       
-}
       #voice-input-btn {
         background-color: #4CAF50;
         border: none;
@@ -27,7 +25,6 @@
         cursor: pointer;
         border-radius: 50%;
       }
-     
 
       #answer-box {
         border: 1px solid black;
@@ -37,28 +34,30 @@
     </style>
   </head>
   <body>
-    <h1>Car Dealers and Auto Repairs, How Can I help You?</h1>
+    <h1>Ask a Question</h1>
     <div id="answer"></div>
     <button id="voice-input-btn"><i class="fa fa-microphone"></i></button>
-    <input type="text" id="text-input" placeholder="Type your query...">
+    <input type="text" id="text-input" placeholder="Type your question...">
     <button id="submit-btn">Submit</button>
     <div id="answer-box"></div>
-    
 
     <script>
       
       var isClose=true;
         const stopwords = ["of", "the", "a", "an", "any", "is", "can", "who", "what", "why", "whom"];
         var editor = "sorts\n" +
-            "    #Companies = {toyota, ford, honda, chevrolet, nissan, hyundai}.\n" +
-            "    #Models = {camry, corolla, rav4, highlander, 4runner, tacoma, mustang, f-150, explorer, edge, escape, ranger, civic, accord, cr-v, pilot, odyssey, ridgeline }.\n" +
+            "    #people = {tommy, alex, john, daniel, sarah, peter, lino}.\n" +
+            "    #gender = {male, female}.\n" +
             "predicates\n" +
-            "    model(#model, #company).\n" +
+            "    advisor(#people, #people).\n" +
             "    friend(#people, #people).\n" +
             "    gender(#people,#gender).\n" +
             "    spanish(#people).\n" +
             "rules\n" +
-            "   model(camry, toyota).\n" +
+            "    advisor(tommy, alex).\n" +
+            "    advisor(tommy, john).\n" +
+            "    advisor(tommy, daniel).\n" +
+            "    advisor(tommy, lino).\n" +
             "    friend(lino, alex).\n" +
             "    friend(lino, peter).\n" +
             "    friend(sarah, alex).\n" +
