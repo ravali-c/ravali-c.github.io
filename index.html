@@ -53,9 +53,9 @@
    " #price = {20, 50, 100, 200, 300, 1000}. \n"+
     "#time= {1, 3, 4, 10}.\n"+
             "predicates\n" +
-           " model(#companies, #models). \n"+
-   " price(#services, #price). \n"+
-   " time(#services, #time). \n "+
+           " model(#models, #companies). \n"+
+   " price(#price, #services). \n"+
+   " time(#time, #services). \n "+
             "rules\n" +
            " model(toyota, camry). \n" +
     " model(toyota, corolla). \n"+
@@ -88,8 +88,8 @@
     "model(hyundai, palisade). \n"+
     "model(hyundai, kona). \n"+
        
-    "price(oil_change, 20). \n"+
-    "time(oil_change, 1).";
+    "price(20, oil_change). \n"+
+    "time(1, oil_change).";
            
         // sorts
         var contstring = editor.split("sorts\n")[1].split("predicates\n");
