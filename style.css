@@ -2,7 +2,10 @@
   text-align: center;
   margin: 50px auto;
 }
-
+.hero{
+  background-image: url("https://www.logodesign.net/logo/vintage-car-coming-out-of-gear-shape-5663ld.png");
+  backgorund-size: cover;
+  
 h1 {
   font-size: 32px;
 }
