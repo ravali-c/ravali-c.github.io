@@ -62,9 +62,11 @@
            "#rentalcars= {small, medium, large, minivan, suv}.\n"+
    " #no_of_seats= {4,5,7}. \n"+
    " #no_of_bag= {1,2,3}.\n"+
+           " #rate= 1..100 .\n"+
             "predicates\n" +
            " model(#models, #companies). \n"+
    " price(#price, #services). \n"+
+            "rate( #rate, #model).\n"+
    " time(#time, #services). \n "+
             "services(#services).\n"+
             "companies(#companies).\n"+
@@ -110,7 +112,7 @@
     "model(santa_fe, hyundai). \n"+
     "model(palisade, hyundai). \n"+
     "model(kona, hyundai). \n"+
-       
+       "rate(24, camry). \n"+
     "price(20, oil_change). \n"+
             "price(100, tire_replacement).\n"+
             "price(300, break_repair).\n"+
