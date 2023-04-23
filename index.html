@@ -56,14 +56,21 @@
            " #companies = {toyota, ford, honda, chevrolet, nissan, hyundai}.\n" +
    " #models = {camry, corolla, rav4, highlander, runner, tacoma, mustang, f150, explorer, edge, escape, ranger, civic, accord, crv, pilot, odyssey, ridgeline, camaro, silverado, equinox, traverse, tahoe, surburban, altima, rogue, pathfinder, murano, armada, frontier, elantra, sonata, tucson, santa_fe, palisade, kona }.\n" +
    " #services = {oil_change, tire_replacement, break_repair, battery_replacement, engine_tuneup, transmission_repair, suspension_repair}. \n"+
-   " #price = {20, 50, 100, 200, 300, 500, 1000}. \n"+
+   " #price = {20, 50, 100, 200, 300, 500, 1000, 130, 170,230,370}. \n"+
     "#time= {1, 3, 4, 10}.\n"+
+           "#rentalcars= {small, medium, large, minivan, suv}.\n"+
+   " #no_of_seats= {4,5,7}. \n"+
+   " #no_of_bag= {1,2,3}.\n"+
             "predicates\n" +
            " model(#models, #companies). \n"+
    " price(#price, #services). \n"+
    " time(#time, #services). \n "+
             "services(#services).\n"+
             "companies(#companies).\n"+
+            "rentalscars(#rentalcars). \n"+
+   " price_of_rental(#price, #rentalcars). \n"+
+   " no_of_seats(#no_of_seats, #rentalcars). \n"+
+   " no_of_bag(#no_of_bag, #rentalcars). \n"+
             "rules\n" +
             "companies(toyota).\n"+
             "companies(ford).\n"+
@@ -117,6 +124,22 @@
             "services(engine_tuneup).\n"+
             "services(transmission_repair).\n"+
             "services(suspension_repair).\n"+
+             "price(100, small).\n"+
+    "price_of_rental(130, medium).\n"+
+    "price_of_rental(170, large). \n"+
+   " price_of_rental(230, suv).\n"+
+   " price_of_rental(370, minivan).\n"+
+   " no_of_seats(4, small). \n"+
+    "no_of_seats(5, medium). \n"+
+    "no_of_seats(5, large).\n"+
+  "  no_of_seats(5, suv). \n"+
+   " no_of_seats(7, minivan). \n"+
+    "no_of_bag(1, small). \n"+
+    "no_of_bag(1, medium). \n"+
+    "no_of_bag(2, large). \n"+
+   " no_of_bag(2, minivan). \n"+
+    "no_of_bag(3, suv). \n"+
+    
         "time(1, tire_replacement).\n"+
             "time(3, break_repair).\n"+
             "time(1, battery_replacement).\n"+
