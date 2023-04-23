@@ -61,12 +61,12 @@
     "#time= {1, 3, 4, 10}.\n"+
            "#rentalcars= {small, medium, large, minivan, suv}.\n"+
    " #no_of_seats= {4,5,7}. \n"+
+           " #rate={24}. \n"+
    " #no_of_bag= {1,2,3}.\n"+
-           " #rate= {24} .\n"+
             "predicates\n" +
            " model(#models, #companies). \n"+
    " price(#price, #services). \n"+
-            "rate( #rate, #model).\n"+
+            "rate( #rate, #models).\n"+
    " time(#time, #services). \n "+
             "services(#services).\n"+
             "companies(#companies).\n"+
