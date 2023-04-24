@@ -12,8 +12,7 @@
     <script src="fuzzyset.js"></script>
 
     <style>
-     
-#voice-input-btn {
+     #voice-input-btn {
   background-color: aqua;
   border: none;
   color: white;
@@ -25,12 +24,22 @@
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 50%;
-  transition: background-color 0.3s ease-in-out;
+  animation: pulse 2s ease-in-out infinite;
 }
 
-#voice-input-btn:hover {
-  background-color: turquoise;
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
+
+
       #answer-box {
   border: 1px solid black;
   padding: 10px;
